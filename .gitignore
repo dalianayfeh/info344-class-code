@@ -1,0 +1,6 @@
+node_modules
+.idea
+.DS_Store
+
+# ignore all files in any directory names 'secret'
+**/secret/
