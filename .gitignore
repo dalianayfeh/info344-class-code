@@ -3,4 +3,8 @@ node_modules
 .DS_Store
 
 # ignore all files in any directory names 'secret'
-**/secret/
+**/secret/*
+
+# except files ending in '.template' or '.md'
+!**/secret/*.template
+!**/secret/*.md
