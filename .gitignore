@@ -2,9 +2,18 @@ node_modules
 .idea
 .DS_Store
 
+<<<<<<< HEAD
 # ignore all files in any directory names 'secret'
 **/secret/*
 
 # except files ending in '.template' or '.md'
 !**/secret/*.template
 !**/secret/*.md
+=======
+# ignore all files in any directory named `secret`
+**/secret/*
+
+# except files ending in `.template` or `.md`
+!**/secret/*.template
+!**/secret/*.md
+>>>>>>> b12876ebfda144fc286d5a39eeaee531fc8241cd
