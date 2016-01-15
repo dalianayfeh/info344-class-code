@@ -1,0 +1,1 @@
+grant select on zips.* to zipuser@localhost;

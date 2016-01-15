@@ -1,1 +1,0 @@
-Create user movieuser@localhost identified by 'MeLdDY/YMyA7EDwXVb6LLZMB3C25fUYhWBFHytjl4bg=';

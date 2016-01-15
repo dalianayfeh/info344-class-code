@@ -1,0 +1,1 @@
+Create user zipuser@localhost identified by 'password';
