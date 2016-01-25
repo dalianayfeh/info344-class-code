@@ -13,6 +13,7 @@
 // });
 
 var http = require('http');
+var id;
 
 function get(url) {
   // Return a new promise.
@@ -30,4 +31,13 @@ function get(url) {
         reject(err);
     });
   });
+}
+
+function getMovie(movieId) {
+    get("http://www.omdbapi.com/?i=" + movieId + "&plot=short&r=json")
+    .then(function(results) {
+        JSON.parse(results);
+    }).catch(function(err) {
+       console.log(err); 
+    }); 
 }
