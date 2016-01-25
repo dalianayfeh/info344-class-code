@@ -51,4 +51,4 @@ Story.create(newStory) //INSERT
     })
     .then(function() {
         mongoose.connection.close();
-    })
+    });
