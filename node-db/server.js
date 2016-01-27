@@ -12,11 +12,11 @@ var storiesApi = require('./controllers/stories-api.js');
 var Story = require('./models/story.js').Model(connPool);
 
 
-
+//creates express app
 var app = express();
 
 app.use(morgan('dev')); //logs every request that comes to the server in console
-app.use(bodyParser.json());
+app.use(bodyParser.json()); 
 
 app.use(express.static(__dirname + '/static')); //allows you to use static files like index.html
 
