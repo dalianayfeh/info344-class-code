@@ -21,4 +21,18 @@ bcrypt.hashAsync(password, rounds)
     .then(function(hash) {
         console.timeEnd('duration');
         console.log(hash);
+        
+        return [hash, bcrypt.compareAsync(password, hash)];
+    })
+    .spread(function(hash, isSame) {
+        console.log("Comparing hash agaist '%s': %j", password, isSame);
+        password += 'x';
+        return [hash, bcrypt.compareAsync(password, hash)];
+    })
+    .spread(function(hash, isSame) {
+        console.log("Comparing hash agaist '%s': %j", password, isSame);
+    })
+    .catch(function(err) {
+        console.error(err);
+        process.exit[1];  
     });
