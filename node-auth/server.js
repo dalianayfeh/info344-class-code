@@ -58,7 +58,7 @@ app.get('/signin/github/callback', passport.authenticate('github'),
     });
 app.get('/signout', function(req, res) {
     req.logout();
-    req.redirect('/');
+    res.redirect('/');
 });
 
 app.use(express.static(__dirname + '/static/public'));
