@@ -57,7 +57,7 @@ app.get('/signin/github/callback', passport.authenticate('github'),
         res.redirect('/secure.html');
     });
 app.get('/signout', function(req, res) {
-    req.logout();
+    req.logOut();
     res.redirect('/');
 });
 
@@ -71,6 +71,12 @@ app.use(function(req, res, next) {
 });
 
 app.use(express.static(__dirname + '/static/secure'));
+
+//returned after done() function above
+app.get('/app/v1/users/me', function(req, res) {
+    //req.user is currently authenticated user
+    res.json(req.user);    
+});
 
 app.listen(80, function() {
     console.log('Server is listening...');
