@@ -25,4 +25,10 @@ node_modules
 
 # and the VSCode typings directory
 typings
+<<<<<<< HEAD
 >>>>>>> df59660a8f4088193de7715a62b43593604ef9b1
+=======
+
+# ignore .key files
+*.key
+>>>>>>> 278f399a03f67ccb40c80ec9fe59b166249f0dbb
